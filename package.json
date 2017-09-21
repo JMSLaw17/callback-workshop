@@ -1,0 +1,21 @@
+{
+  "name": "callback-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "request.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
