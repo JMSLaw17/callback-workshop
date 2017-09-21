@@ -1,7 +1,7 @@
 var fs = require('fs');
 var http = require('http');
 
-
+// READ
 // The get request in this function retrieves data on Harry Potter characters from an API.
 // The parsedData received from this API will be an array containing character objects.
 // Each character object has several properties. The only properties relevant to us are

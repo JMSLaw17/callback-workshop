@@ -1,5 +1,5 @@
 const fs = require("fs");
-/* ASYNC-TEXT-PARSE 
+/* READ
 In this exercise, you need to utilize the provided functions as callbacks so that the
 tests pass. The input file contains space-separated numbers on multiple lines of a
 .txt file. Just by filling in the appropriate callbacks, you should be able to
@@ -35,13 +35,15 @@ false
 
 /* ----------------------------  */
 
-// replace references to this function
+// DO NOT EDIT; replace the references to it with references to other functions
 function PLACEHOLDER() {};
 
 // call the callback to initiateParse so that it only runs after parsing is complete
 function initiateParse(callback) {
+  // begins the parsing process by reading input
   fs.readFile(__dirname + '/../input.txt', 'utf8', PLACEHOLDER);
-
+  
+  // writes output to output file
   function writeOutput(err, data) {
     let output = '';
     for (let i = 0; i < data.length; i++) {
@@ -55,7 +57,8 @@ function initiateParse(callback) {
       if (err) throw err;
     });
   };
-
+  
+  // async function that sums lines and determines if they add up to more than 100
   function calculateLines(data, cb) {
     let filteredData = data.map(function(el) {
       let values = el.split(' ');
@@ -74,6 +77,7 @@ function initiateParse(callback) {
     }, 100);
   };
 
+  // splits string by line
   function splitLines(err, data) {
     if (err) throw err;
     let input = data.toString().split('\n');
